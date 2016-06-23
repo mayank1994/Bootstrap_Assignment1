@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Bootstrap_Assignment1.2</title>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+  	<script type="text/javascript">
+  		$(document).ready(function(){
+  			$("#submit").click( function(){ 
+  				$("#mname").text($("#name").val());
+  				$("#mage").text($("#age").val());
+  				$("#memail").text($("#email").val());
+  				$("#mphone").text($("#phone").val());
+  				sessionStorage.name=$("#name").val();
+  				sessionStorage.age=$("#age").val();
+				sessionStorage.email=$("#email").val();
+			
+  			});
+  		});
+  	</script>
+
+</head>
+<body>
+		<!-- Modal -->
+	
+
+	<div class="container">
+		<form role="form" class="form" action="Bootstrap_Assignment1.3.html" method="POST">
+			<div class="form-group">
+				<label for="name" class="control-label col-sm-4"> Name </label>
+				<input type="text" class="control-label col-sm-8" id="name"> </input>
+			</div>
+		
+			<div class="form-group">
+				<label for="age" class="control-label col-sm-4"> Age </label>
+				<input type="text" class="control-label col-sm-8" id="age"> </input>
+			</div>
+			
+			<div class="form-group">
+				<label for="email" class="control-label col-sm-4"> Email </label>
+				<input type="email" class="control-label col-sm-8" id="email"> </input>
+			</div>
+			
+			
+			
+			<div class="form-group">
+			<button type="button" class="btn btn-md btn-primary" data-toggle="modal" data-target="#myModal" id="submit">Submit</button>
+			</div>
+			<!-- Modal -->
+			<div class="modal fade" id="myModal" role="dialog">
+			    <div class="modal-dialog">
+			    	
+			      <div class="modal-content">
+				        <div class="modal-header">
+				          <button type="button" class="close" data-dismiss="modal">&times;</button>
+				          <h2 class="modal-title">Do you want to send the information via this form ?</h2>
+				        </div>
+
+				        <div class="modal-body">
+							<table class="table table-bordered">
+						    <thead>
+						      <tr>
+						        <th>Details</th>
+						        <th>Value</th>
+						       </tr>
+						    </thead>
+						    <tbody>
+						      <tr>
+						        <td>Name</td>
+						        <td id="mname"></td>						        
+						      </tr>
+						      <tr>
+						        <td>Age </td>
+						        <td id="mage"></td>
+						       </tr>
+						      <tr>
+						        <td>Email</td>
+						        <td id="memail"></td>
+						      </tr>
+						     
+						    </tbody>
+						  </table>
+				         		
+				         	
+				        </div>
+
+				        <div class="modal-footer">
+				          <div class="btn-grp">
+					          <button  type="button" class="btn btn-default" data-dismiss="modal">No</button>
+					          <input type="submit" class="btn btn-primary " value="Submit" id="sub">
+					      </div>
+				        </div>
+			      </div>
+			      
+			    </div>
+ 			</div>  
+
+
+		</form>
+	</div>
+
+
+
+
+
+</body>
